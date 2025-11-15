@@ -1,6 +1,7 @@
 from pathlib import Path
 from ElementDataStructure import ElementDataStructure
 
+# Analyzes code in a given file
 class CodeScanner:
     
     def __init__(self, in_core):
