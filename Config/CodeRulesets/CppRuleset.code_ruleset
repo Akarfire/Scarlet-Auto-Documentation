@@ -1,0 +1,32 @@
+# Scarlet Auto Documentation C++ ruleset
+
+file_types = .h;
+
+# Scope analysis parameters
+scope = symbol;
+scope_begin_symbol = {;
+scope_end_symbol = };
+
+
+# Comment pattern
+pattern - comment:
+"//<Comment>";
+
+pattern - comment - (multi_line):
+"/*<Comment>*/";
+
+
+# Class pattern
+pattern - class:
+"class <Name>: \repeat|zero_okay|,|*[public, protected, private] <ParentName>*\";
+
+
+# Function pattern
+pattern - function:
+"<ReturnType> <FunctionName>(\repeat|zero_okay|,|<ArgumentType> <ArgumentName>\)";
+
+
+# Variable pattern
+pattern - var:
+"<Type> <VarName>";
+
